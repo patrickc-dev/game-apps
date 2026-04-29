@@ -6,6 +6,18 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [
+      {
+        "source": "/nooklist{,/**}",
+        "destination": "https://nooklist.web.app/:splat",
+        "type": 301
+      },
+      {
+        "source": "/bnstool{,/**}",
+        "destination": "https://bnstool.web.app/:splat",
+        "type": 301
+      }
+    ],
     "rewrites": [
       {
         "source": "**",
@@ -14,3 +26,4 @@
     ]
   }
 }
+

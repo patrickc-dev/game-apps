@@ -6,6 +6,19 @@ export default function Home() {
       path: '/ticket-to-ride',
       name: '🎟️ Ticket to Ride',
       description: 'Score tracker for Ticket to Ride board game',
+      internal: true,
+    },
+    {
+      path: '/nooklist',
+      name: '📝 Nooklist',
+      description: 'Search items and view pictures of the game in English or Mandarin',
+      internal: false,
+    },
+    {
+      path: '/bnstool',
+      name: '⚔️ BNS Tool',
+      description: 'Add and track boss time for the mobile game Blade and Soul',
+      internal: false,
     },
   ]
 
@@ -36,58 +49,67 @@ export default function Home() {
             opacity: 0.7,
             margin: 0,
           }}>
-            Pick a game to get started
+            Pick an app to get started
           </p>
         </div>
 
         <div style={{ display: 'grid', gap: 16 }}>
-          {apps.map((app) => (
-            <Link
-              key={app.path}
-              to={app.path}
-              style={{ textDecoration: 'none' }}
-            >
-              <div style={{
-                background: '#fff',
-                border: '3px solid #333',
-                borderRadius: 16,
-                padding: '24px',
-                boxShadow: '4px 4px 0 #333',
-                cursor: 'pointer',
-                transition: 'all 0.2s',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 16,
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translate(-2px, -2px)'
-                e.currentTarget.style.boxShadow = '6px 6px 0 #333'
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translate(0, 0)'
-                e.currentTarget.style.boxShadow = '4px 4px 0 #333'
-              }}
+          {apps.map((app) => {
+            const Component = app.internal ? Link : 'a'
+            const linkProps = app.internal
+              ? { to: app.path }
+              : { href: app.path, target: '_blank', rel: 'noopener noreferrer' }
+
+            return (
+              <Component
+                key={app.path}
+                {...linkProps}
+                style={{ textDecoration: 'none' }}
               >
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontSize: 22,
-                    fontWeight: 900,
-                    marginBottom: 4,
-                  }}>
-                    {app.name}
+                <div style={{
+                  background: '#fff',
+                  border: '3px solid #333',
+                  borderRadius: 16,
+                  padding: '24px',
+                  boxShadow: '4px 4px 0 #333',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 16,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translate(-2px, -2px)'
+                  e.currentTarget.style.boxShadow = '6px 6px 0 #333'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translate(0, 0)'
+                  e.currentTarget.style.boxShadow = '4px 4px 0 #333'
+                }}
+                >
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{
+                      fontFamily: "'Playfair Display', serif",
+                      fontSize: 22,
+                      fontWeight: 900,
+                      marginBottom: 4,
+                    }}>
+                      {app.name}
+                    </div>
+                    <div style={{
+                      fontSize: 14,
+                      opacity: 0.6,
+                    }}>
+                      {app.description}
+                    </div>
                   </div>
-                  <div style={{
-                    fontSize: 14,
-                    opacity: 0.6,
-                  }}>
-                    {app.description}
+                  <div style={{ fontSize: 28, flexShrink: 0 }}>
+                    {app.internal ? '→' : '↗'}
                   </div>
                 </div>
-                <div style={{ fontSize: 28, flexShrink: 0 }}>→</div>
-              </div>
-            </Link>
-          ))}
+              </Component>
+            )
+          })}
         </div>
       </div>
     </div>
