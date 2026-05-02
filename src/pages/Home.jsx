@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import QuestionBlockLogo from '../components/QuestionBlockLogo'
 
 export default function Home() {
   const apps = [
@@ -35,6 +36,9 @@ export default function Home() {
           textAlign: 'center',
           marginBottom: 60,
         }}>
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
+            <QuestionBlockLogo size={96} />
+          </div>
           <h1 style={{
             fontFamily: "'Playfair Display', serif",
             fontSize: 48,

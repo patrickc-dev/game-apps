@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Game Apps">
+  <defs>
+    <linearGradient id="front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F9C340"/>
+      <stop offset="100%" stop-color="#E89500"/>
+    </linearGradient>
+    <linearGradient id="top" gradientUnits="userSpaceOnUse" x1="10" y1="15" x2="90" y2="35">
+      <stop offset="0%" stop-color="#FFE566"/>
+      <stop offset="100%" stop-color="#FFC830"/>
+    </linearGradient>
+    <linearGradient id="side" gradientUnits="userSpaceOnUse" x1="90" y1="15" x2="110" y2="85">
+      <stop offset="0%" stop-color="#C47800"/>
+      <stop offset="100%" stop-color="#7A4A00"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Right/shadow face -->
+  <polygon points="90,35 110,15 110,85 90,105" fill="url(#side)"/>
+
+  <!-- Top face -->
+  <polygon points="10,35 90,35 110,15 30,15" fill="url(#top)"/>
+
+  <!-- Front face -->
+  <rect x="10" y="35" width="80" height="70" fill="url(#front)"/>
+
+  <!-- Inner border frame on front face -->
+  <rect x="13" y="38" width="74" height="64" fill="none" stroke="#4A2800" stroke-width="2"/>
+
+  <!-- Corner patches -->
+  <rect x="12" y="37" width="10" height="10" fill="#4A2800"/>
+  <rect x="78" y="37" width="10" height="10" fill="#4A2800"/>
+  <rect x="12" y="93" width="10" height="10" fill="#4A2800"/>
+  <rect x="78" y="93" width="10" height="10" fill="#4A2800"/>
+
+  <!-- Outline strokes for all three faces -->
+  <rect x="10" y="35" width="80" height="70" fill="none" stroke="#4A2800" stroke-width="2.5"/>
+  <polygon points="10,35 90,35 110,15 30,15" fill="none" stroke="#4A2800" stroke-width="2.5"/>
+  <polygon points="90,35 110,15 110,85 90,105" fill="none" stroke="#4A2800" stroke-width="2.5"/>
+
+  <!-- Question mark -->
+  <text x="50" y="72" text-anchor="middle" dominant-baseline="middle"
+    font-family="Arial Black, Impact, Arial, sans-serif" font-weight="900"
+    font-size="38" fill="white" stroke="#4A2800" stroke-width="3.5"
+    paint-order="stroke">?</text>
+</svg>
