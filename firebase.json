@@ -8,8 +8,18 @@
     ],
     "redirects": [
       {
+        "source": "/nooklist",
+        "destination": "https://nooklist.web.app",
+        "type": 301
+      },
+      {
         "source": "/nooklist/:path*",
         "destination": "https://nooklist.web.app/:path*",
+        "type": 301
+      },
+      {
+        "source": "/bnstool",
+        "destination": "https://bnstool.web.app",
         "type": 301
       },
       {

@@ -10,13 +10,13 @@ export default function Home() {
       internal: true,
     },
     {
-      path: '/nooklist',
+      path: 'https://nooklist.web.app',
       name: '📝 Nooklist',
       description: 'Search items and view pictures of the game in English or Mandarin',
       internal: false,
     },
     {
-      path: '/bnstool',
+      path: 'https://bnstool.web.app',
       name: '⚔️ BNS Tool',
       description: 'Add and track boss time for the mobile game Blade and Soul',
       internal: false,
