@@ -1,0 +1,17 @@
+{
+  "name": "Game Apps",
+  "short_name": "Game Apps",
+  "description": "A collection of board game companion apps",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5EFE6",
+  "theme_color": "#F7B731",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
